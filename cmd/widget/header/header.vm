@@ -1,0 +1,30 @@
+#parse('/widget/header/jdHeader.vm')
+
+<div class="topbar">
+    <div class="container">
+        <div class="logo"><a href="/home" title="京东异业联盟平台"><img src="/static/img/logo.png" alt=""><em>京东异业联盟平台</em></a></div>
+        <div class="nav">
+            <ul>
+                <li class="home"><a href="/home" #if($pageNav=="home") class="current" #end>首页<span></span></a></li>
+                <li><a href="http://vip.jd.com/fuli/index.html">跨界权益<span></span></a></li>
+                <li><a href="/apply" #if($pageNav=="apply") class="current" #end>申请合作<span></span></a></li>
+                <li><a href="/case" #if($pageNav=="case") class="current" #end>产品案例<span></span></a></li>
+            </ul>
+        </div>
+        <div class="login-status">
+            #if($login)
+            <div class="my">
+                <a href="/my">
+                    <img src="/static/img/avatar_default.png" alt="">
+                    <em>我的合作</em>
+                </a>
+            </div>
+            #else
+            <div class="links">
+                <a href="https://passport.jd.com/new/login.aspx?ReturnUrl=">登录</a>　|　
+                <a href="https://reg.jd.com/reg/person?ReturnUrl=">注册</a>
+            </div>
+            #end
+        </div>
+    </div>
+</div>

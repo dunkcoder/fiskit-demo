@@ -1,0 +1,11 @@
+<div id="footer">
+    <div class="copyright">Copyright © 2004-2015  京东JD.com 版权所有</div>
+    <div class="links">
+        <a href="/help/contact">联系我们</a>　　·　　
+        <a href="/apply">异业联盟合作</a>　　·　　
+        <a href="/help">帮助中心</a>　　
+        官方邮箱：<a href="mailto:jd-yiyelm@jd.com">jd-yiyelm@jd.com</a>
+    </div>
+</div>
+
+#parse('/widget/footer/scripts.vm')

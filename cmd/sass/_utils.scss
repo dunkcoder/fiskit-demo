@@ -1,0 +1,78 @@
+@import 'lib';
+input,
+a {
+    outline:0;
+}
+
+// float & clear float
+.fl {
+    float: left;
+}
+.fr {
+    float: right;
+}
+.clearfix {
+    *zoom: 1;
+}
+.clearfix:before, .clearfix:after {
+    display: table;
+    line-height: 0;
+    content: "";
+}
+.clearfix:after {
+    clear: both;
+}
+
+// visibility
+.hide {
+    display: none;
+}
+.show {
+    display: block;
+}
+.invisible {
+    visibility: hidden;
+}
+
+// text-align
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+
+// 链接样式
+a:link,
+a:visited {
+    color: $colorMain;
+    text-decoration: none;
+}
+a:hover {
+    color: $colorRed;
+}
+
+// 字体颜色
+.ft-main {
+    color: $colorMain;
+}
+.ft-success {
+    color: $colorSuccess;
+}
+.ft-warn {
+    color: $colorWarn;
+}
+.ft-danger {
+    color: $colorDanger;
+}
+
+// 字体大小
+.ft12 {
+    font-size: 12px;
+}
+.ft14 {
+    font-size: 14px;
+}
+.ft16 {
+    font-size: 16px;
+}
+.ft18 {
+    font-size: 18px;
+}

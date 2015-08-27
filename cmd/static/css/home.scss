@@ -1,0 +1,72 @@
+@import '../../sass/lib';
+.home-w1 {
+    height: 581px;
+    background: #0d213a url(../img/home/home_w1.jpg) center top no-repeat;
+    position: relative;
+    a {
+        position: absolute;
+        width: 208px;
+        height: 66px;
+        top: 411px;
+        left: 50%;
+        margin-left: -124px;
+    }
+}
+.home-w2,
+.home-w3 {
+    .title {
+        font-size: 28px;
+        padding: 50px 0 0 38px;
+        font-weight: normal;
+    }
+}
+.home-w2 {
+    height: 640px;
+    background: #e6e6e6 url(../img/home/home_w2.png) center top no-repeat;
+    .title {
+        margin-bottom: 26px;
+    }
+    .list {
+        padding-left: 86px;
+        overflow: hidden;
+    }
+    .item {
+        float: left;
+        width: 344px;
+        height: 130px;
+        padding-top: 375px;
+        background: url(../img/home/home_w2_list.png) no-repeat;
+    }
+    $color: (#34c8ca, #fd7272, #8e6bd2);
+    @for $i from 0 to length($color) {
+        .item-#{$i} {
+            background-position: (-344px * $i) 0;
+            background-color: nth($color, $i + 1);
+        }
+    }
+    .inner {
+        padding: 24px 24px 0 24px;
+        color: #fff;
+        line-height: 24px;
+        font-size: 14px;
+    }
+}
+.home-w3 {
+    padding-bottom: 68px;
+    .title {
+        margin-bottom: 58px;
+    }
+    .inner {
+        width: 1192px;
+        height: 316px;
+        position: relative;
+        background: url(../img/home/home_w3.png);
+        a {
+            position: absolute;
+            width: 155px;
+            height: 58px;
+            top: 258px;
+            left: 51px;
+        }
+    }
+}

@@ -1,0 +1,29 @@
+@import 'lib';
+@include keyframes(bottomIn, webkit moz spec) {
+    @include enable-prefix-for-all;
+    0% {
+        opacity: 0;
+        @include transform(translateY(40px));
+    }
+    90% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+        @include transform(translateY(0));
+    }
+}
+@include keyframes(bottomOut, webkit moz spec) {
+    @include enable-prefix-for-all;
+    0% {
+        opacity: 1;
+        @include transform(translateY(0));
+    }
+    90% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 0;
+        @include transform(translateY(40px));
+    }
+}

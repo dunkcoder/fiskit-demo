@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>首页 - 异业合作</title>
+    <meta name="keywords" content=""/>
+    <meta name="description" content="" />
+    #parse('/widget/meta/meta.vm')
+    <link rel="stylesheet" href="$!{staticDomain}/static/css/home.scss">
+</head>
+<body>
+
+    #set($pageNav="home")
+    #set($login=false)
+    #parse("/widget/header/header.vm")
+
+    <div class="home-w1">
+        <a href="/apply"></a>
+    </div>
+
+    <div class="home-w2">
+        <div class="container">
+            <h2 class="title">合作优势</h2>
+            <ul class="list">
+                <li class="item item-0">
+                    <div class="inner">京东跨界权益有效利用数千万用户的年龄性别地域等基本信息，及购物行为和浏览习惯等高级信息，帮助您更精准发放企业福利。</div>
+                </li>
+                <li class="item item-1">
+                    <div class="inner">京东跨界权益有效利用数千万用户的年龄性别地域等基本信息，及购物行为和浏览习惯等高级信息，帮助您更精准发放企业福利。</div>
+                </li>
+                <li class="item item-2">
+                    <div class="inner">京东跨界权益有效利用数千万用户的年龄性别地域等基本信息，及购物行为和浏览习惯等高级信息，帮助您更精准发放企业福利。</div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="home-w3">
+        <div class="container">
+            <h2 class="title">异业合作流程</h2>
+            <div class="inner"><a href="/apply"></a></div>
+        </div>
+    </div>
+
+
+    #parse("/widget/footer/footer.vm")
+
+</body>
+</html>
