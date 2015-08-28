@@ -3,5 +3,4 @@
 seajs.config({
     base: '$!{staticDomain}'
 })
-seajs.use('static/app/common.js');
 </script>

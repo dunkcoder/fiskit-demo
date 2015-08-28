@@ -1,7 +1,7 @@
-@import '../../sass/lib';
+@import '../../sass/_lib';
 .home-w1 {
     height: 581px;
-    background: #0d213a url(../img/home/home_w1.jpg) center top no-repeat;
+    background: #0d213a url(img/home_w1.jpg) center top no-repeat;
     position: relative;
     a {
         position: absolute;
@@ -22,7 +22,7 @@
 }
 .home-w2 {
     height: 640px;
-    background: #e6e6e6 url(../img/home/home_w2.png) center top no-repeat;
+    background: #e6e6e6 url(img/home_w2.png) center top no-repeat;
     .title {
         margin-bottom: 26px;
     }
@@ -35,7 +35,7 @@
         width: 344px;
         height: 130px;
         padding-top: 375px;
-        background: url(../img/home/home_w2_list.png) no-repeat;
+        background: url(img/home_w2_list.png) no-repeat;
     }
     $color: (#34c8ca, #fd7272, #8e6bd2);
     @for $i from 0 to length($color) {
@@ -60,7 +60,7 @@
         width: 1192px;
         height: 316px;
         position: relative;
-        background: url(../img/home/home_w3.png);
+        background: url(img/home_w3.png);
         a {
             position: absolute;
             width: 155px;

@@ -1,5 +1,5 @@
 #set($staticDomain="")
 <link rel="icon" href="http://www.jd.com/favicon.ico" type="image/x-icon"/>
 <link type="text/css" rel="stylesheet"  href="http://misc.360buyimg.com/jdf/1.0.0/unit/??ui-base/1.0.0/ui-base.css,shortcut/2.0.0/shortcut.css,myjd/2.0.0/myjd.css,global-footer/1.0.0/global-footer.css"/>
-<link rel="stylesheet" href="$!{staticDomain}/static/css/common.scss">
 <script type="text/javascript">window.pageConfig={compatible:true};</script><!--ignore-->
+#parse('/widget/common/common.vm')

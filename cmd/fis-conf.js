@@ -29,9 +29,12 @@ config.packed && fis
     .match('/static/lib/**', {
         packTo: '/static/lib/lib_pkg.js'
     })
+    .match('/static/components/**', {
+        packTo: '/static/components/components_pkg.js'
+    })
     .match('/widget/**.{css,scss}', {
         packTo: '/widget/widget_pkg.css'
-    })
+    });
 
 fis.media('dev').match('*', {
     deploy: fis.plugin('local-deliver', {

@@ -1,0 +1,21 @@
+#footer {
+  padding: 28px 0 200px;
+  background: #292635;
+  line-height: 1.8;
+  text-align: center;
+  .copyright {
+    color: #fff;
+    padding-bottom: 45px;
+    font-size: 14px;
+  }
+  .links {
+    color: #a29eb5;
+    font-size: 18px;
+    a {
+      color: #a29eb5;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

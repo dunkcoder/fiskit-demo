@@ -6,7 +6,7 @@
     <meta name="keywords" content=""/>
     <meta name="description" content="" />
     #parse('/widget/meta/meta.vm')
-    <link rel="stylesheet" href="$!{staticDomain}/static/css/home.scss">
+    <link rel="stylesheet" href="$!{staticDomain}/page/home/home.scss">
 </head>
 <body>
 

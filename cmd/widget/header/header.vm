@@ -2,7 +2,7 @@
 
 <div class="topbar">
     <div class="container">
-        <div class="logo"><a href="/home" title="京东异业联盟平台"><img src="/static/img/logo.png" alt=""><em>京东异业联盟平台</em></a></div>
+        <div class="logo"><a href="/home" title="京东异业联盟平台"><img src="/widget/header/img/logo.png" alt=""><em>京东异业联盟平台</em></a></div>
         <div class="nav">
             <ul>
                 <li class="home"><a href="/home" #if($pageNav=="home") class="current" #end>首页<span></span></a></li>
@@ -15,7 +15,7 @@
             #if($login)
             <div class="my">
                 <a href="/my">
-                    <img src="/static/img/avatar_default.png" alt="">
+                    <img src="/widget/header/img/avatar_default.png" alt="">
                     <em>我的合作</em>
                 </a>
             </div>
