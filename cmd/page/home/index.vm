@@ -6,12 +6,11 @@
     <meta name="keywords" content=""/>
     <meta name="description" content="" />
     #parse('/widget/meta/meta.vm')
-    <link rel="stylesheet" href="$!{staticDomain}/page/home/home.scss">
+    <link rel="stylesheet" href="$!{staticDomain}/static/home/home.scss">
 </head>
 <body>
 
     #set($pageNav="home")
-    #set($login=false)
     #parse("/widget/header/header.vm")
 
     <div class="home-w1">

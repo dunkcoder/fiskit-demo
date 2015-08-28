@@ -3,7 +3,7 @@ var config = {
     // 静态资源版本号
     version: '1.0.0',
     // 合并开关
-    packed: false,
+    packed: true,
     // cdn域名开关，prod环境始终为true
     cdn: false,
     // cdn域名地址
@@ -22,15 +22,15 @@ var config = {
     }
 };
 
-fis.config.get('initConfig')(config);
+fis.amount(config);
 
 // 合并设置
 config.packed && fis
-    .match('/static/lib/**', {
-        packTo: '/static/lib/lib_pkg.js'
+    .match('/static/js/lib/**', {
+        packTo: '/static/js/lib_pkg.js'
     })
-    .match('/static/components/**', {
-        packTo: '/static/components/components_pkg.js'
+    .match('/static/js/common/**', {
+        packTo: '/static/js/common_pkg.js'
     })
     .match('/widget/**.{css,scss}', {
         packTo: '/widget/widget_pkg.css'
@@ -38,6 +38,6 @@ config.packed && fis
 
 fis.media('dev').match('*', {
     deploy: fis.plugin('local-deliver', {
-        to: 'd:\\www\\fiskit_test'
+        to: 'd:\\www\\fiskit_test_cmd'
     })
 });
