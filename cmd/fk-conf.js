@@ -3,13 +3,13 @@ var config = {
     // 静态资源版本号
     version: '1.0.0',
     // 合并开关
-    packed: true,
+    packed: false,
     // cdn域名开关，prod环境始终为true
     cdn: false,
     // cdn域名地址
     cdnUrl: 'http://static.360buyimg.com/yiye',
     // MD5后缀开关
-    useHask: false,
+    useHash: false,
     velocity: {
         loader: 'seajs.use',
         macro: '/page/macro.vm'
@@ -22,10 +22,10 @@ var config = {
     }
 };
 
-fis.amount(config);
+fiskit.amount(config);
 
 // 合并设置
-config.packed && fis
+config.packed && fiskit
     .match('/static/js/lib/**', {
         packTo: '/static/js/lib_pkg.js'
     })
@@ -36,8 +36,8 @@ config.packed && fis
         packTo: '/widget/widget_pkg.css'
     });
 
-fis.media('dev').match('*', {
-    deploy: fis.plugin('local-deliver', {
+fiskit.media('dev').match('*', {
+    deploy: fiskit.plugin('local-deliver', {
         to: 'd:\\www\\fiskit_test_cmd'
     })
 });
