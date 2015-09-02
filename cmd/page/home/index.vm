@@ -5,13 +5,13 @@
     <title>首页 - 异业合作</title>
     <meta name="keywords" content=""/>
     <meta name="description" content="" />
-    #parse('/widget/meta/meta.vm')
-    <link rel="stylesheet" href="$!{staticDomain}/static/home/home.scss">
+    #parse('widget/meta/meta.vm')
+    <link rel="stylesheet" href="/static/home/home.scss">
 </head>
 <body>
 
     #set($pageNav="home")
-    #parse("/widget/header/header.vm")
+    #parse("widget/header/header.vm")
 
     <div class="home-w1">
         <a href="/apply"></a>
@@ -42,7 +42,7 @@
     </div>
 
 
-    #parse("/widget/footer/footer.vm")
+    #parse("widget/footer/footer.vm")
 
 </body>
 </html>
