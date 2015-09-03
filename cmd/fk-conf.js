@@ -18,6 +18,8 @@ var config = {
         macro: '/macro.vm',
         root: [root, root + '/page']
     },
+    // release dev的目标路径
+    devPath: 'd:\\www\\fiskit_test_cmd',
     // 模块化配置
     modules: {
         mode: 'cmd',
@@ -28,9 +30,11 @@ var config = {
 
 fiskit.amount(config);
 
-fiskit.match('/static/common/lib/**.js', {
-    isMod: true
-});
+fiskit
+    .match('/page/_scripts.html', { release: false })
+    .match('/static/common/lib/**.js', {
+        isMod: true
+    });
 
 // 合并设置
 config.packed && fiskit
@@ -38,19 +42,10 @@ config.packed && fiskit
         packTo: '/widget/widget_pkg.css'
     });
 
-fiskit.media('dev').match('*', {
-    deploy: fiskit.plugin('local-deliver', {
-        to: 'd:\\www\\fiskit_test_cmd'
-    })
-});
-
-// 只发布VM文件
-var tmpVelocity = util.merge({parse: false}, config.velocity);
+// 替换模板cdn前缀
 fiskit
-    .media('tmpl')
+    .media('vm')
     .match('*.vm', {
-        parser: fiskit.plugin('velocity', tmpVelocity),
-        rExt: '.vm',
         deploy: [
             fiskit.plugin('replace', {
                 from: config.cdnUrl + '/' + config.version,
@@ -60,10 +55,4 @@ fiskit
                 to: './output/template/' + config.version
             })
         ]
-    })
-    .match('/page/(**.vm)', {
-        release: '$1'
-    })
-    .match('/widget/**.vm', {
-        release: '$0'
     })
