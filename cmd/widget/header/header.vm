@@ -1,4 +1,4 @@
-#include('/widget/header/jdHeader.vm')
+#include('widget/header/jdHeader.vm')
 
 <div class="topbar">
     <div class="container">

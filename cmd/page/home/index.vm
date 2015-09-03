@@ -44,5 +44,7 @@
 
     #parse("widget/footer/footer.vm")
 
+    <link rel="import" href="/page/_scripts.html?__inline">
+
 </body>
 </html>
