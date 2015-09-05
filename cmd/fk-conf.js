@@ -14,12 +14,14 @@ var config = {
     // MD5后缀开关
     useHash: false,
     velocity: {
-        loader: 'seajs.use',
+        loader: 'seajs',
+        loadSync: true,
         macro: '/macro.vm',
         root: [root, root + '/page']
     },
     // release dev的目标路径
     devPath: 'd:\\www\\fiskit_test_cmd',
+    replace: false,
     // 模块化配置
     modules: {
         mode: 'cmd',
@@ -28,7 +30,12 @@ var config = {
     }
 };
 
-fiskit.amount(config);
+fiskit.amount(util.merge(config, {
+    replace: {
+        from: config.cdnUrl + '/' + config.version,
+        to: '$!{staticDomain}'
+    }
+}));
 
 fiskit
     .match('/page/_scripts.html', { release: false })
@@ -40,19 +47,7 @@ fiskit
 config.packed && fiskit
     .match('/widget/**.{css,scss}', {
         packTo: '/widget/widget_pkg.css'
-    });
-
-// 替换模板cdn前缀
-fiskit
-    .media('vm')
-    .match('*.vm', {
-        deploy: [
-            fiskit.plugin('replace', {
-                from: config.cdnUrl + '/' + config.version,
-                to: '$!{staticDomain}'
-            }),
-            fiskit.plugin('local-deliver', {
-                to: './output/template/' + config.version
-            })
-        ]
     })
+    .match('/widget/**.js', {
+        packTo: '/widget/widget_pkg.js'
+    });
