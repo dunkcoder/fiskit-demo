@@ -20,7 +20,7 @@ var config = {
         root: [root, root + '/page']
     },
     // release dev的目标路径
-    devPath: 'd:\\www\\fiskit_test_cmd',
+    //devPath: 'd:\\www\\fiskit_test_cmd',
     replace: false,
     // 模块化配置
     modules: {
@@ -38,7 +38,6 @@ fiskit.amount(util.merge(config, {
 }));
 
 fiskit
-    .match('/page/_scripts.html', { release: false })
     .match('/static/common/lib/**.js', {
         isMod: true
     });

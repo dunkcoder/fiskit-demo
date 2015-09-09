@@ -15,7 +15,7 @@
             #if($login)
             <div class="my">
                 <a href="/my">
-                    <img src="/static/img/avatar_default.png" alt="">
+                    <img src="/static/common/img/avatar_default.png" alt="">
                     <em>我的合作</em>
                 </a>
             </div>

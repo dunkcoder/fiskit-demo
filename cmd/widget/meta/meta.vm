@@ -3,4 +3,4 @@
 <script type="text/javascript">
     window.pageConfig={compatible:true,cdnUrl:'$!{staticDomain}'};
 </script><!--ignore-->
-<link rel="stylesheet" href="/static/css/global.scss"/>
+<link rel="stylesheet" href="/static/common/css/global.scss"/>
