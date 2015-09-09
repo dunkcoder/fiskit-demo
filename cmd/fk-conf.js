@@ -6,7 +6,7 @@ var config = {
     // 静态资源版本号
     version: '1.0.0',
     // 合并开关
-    packed: true,
+    packed: false,
     // cdn域名开关，prod环境始终为true
     cdn: false,
     // cdn域名地址
@@ -27,6 +27,15 @@ var config = {
         mode: 'cmd',
         forwardDeclaration: true,
         baseUrl: '/'
+    },
+    // 打包设置
+    package: {
+        '/widget/**.{css,scss}': {
+            packTo: '/widget/widget_pkg.css'
+        },
+        '/widget/**.js': {
+            packTo: '/widget/widget_pkg.js'
+        }
     }
 };
 
@@ -41,22 +50,3 @@ fiskit
     .match('/static/common/lib/**.js', {
         isMod: true
     });
-
-// 合并设置
-// 只有media('dev')会在config.packed为true时打包
-// 其它media默认打包
-['dev', 'vm', 'debug', 'prod'].forEach(function(_media) {
-    if(_media !== 'dev' || config.packed) {
-        amountPkg(_media);
-    }
-})
-function amountPkg(_media) {
-    fiskit
-        .media(_media)
-        .match('/widget/**.{css,scss}', {
-            packTo: '/widget/widget_pkg.css'
-        })
-        .match('/widget/**.js', {
-            packTo: '/widget/widget_pkg.js'
-        });
-}
