@@ -44,7 +44,8 @@
 
     #parse("widget/footer/footer.vm")
 
-    <link rel="import" href="/page/_scripts.vm?__inline">
+    <script data-loader="seajs" src="http://misc.360buyimg.com/??jdf/lib/jquery-1.6.4.js,jdf/1.0.0/unit/base/1.0.0/base.js"></script>
+    <script>seajs.config({base: pageConfig.cdnUrl});</script>
 
 </body>
 </html>
