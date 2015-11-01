@@ -5,7 +5,7 @@
     <title>首页 - 异业合作</title>
     <meta name="keywords" content=""/>
     <meta name="description" content="" />
-    #parse('widget/meta/meta.vm')
+    <link rel="import" href="page/inc/meta.vm?__inline">
     <link rel="stylesheet" href="/static/home/home.scss">
 </head>
 <body>
@@ -41,11 +41,9 @@
         </div>
     </div>
 
-
     #parse("widget/footer/footer.vm")
-
-    <script data-loader="seajs" src="http://misc.360buyimg.com/??jdf/lib/jquery-1.6.4.js,jdf/1.0.0/unit/base/1.0.0/base.js"></script>
-    <script>seajs.config({base: pageConfig.cdnUrl});</script>
-
+    
+    #script('widget/jquery.scrollbar/jquery.scrollbar.js')
+    
 </body>
 </html>

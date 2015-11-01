@@ -7,3 +7,8 @@
         官方邮箱：<a href="mailto:jd-yiyelm@jd.com">jd-yiyelm@jd.com</a>
     </div>
 </div>
+
+#framework('http://misc.360buyimg.com/??jdf/lib/jquery-1.6.4.js,jdf/1.0.0/unit/base/1.0.0/base.js')
+#script()
+    seajs.config({base: pageConfig.cdnUrl});
+#endscript
